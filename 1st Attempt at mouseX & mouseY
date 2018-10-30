@@ -1,0 +1,19 @@
+//making an interactive, moveable "rainbow"
+
+void setup() {
+  size(300, 300);
+  noFill();
+  PImage img; 
+  img = loadImage("maxresdefault.jpg");
+  background(img); 
+}
+
+void draw() {
+  strokeWeight(random(3, 10)); 
+  stroke(random(255), random(255), random(255)); 
+  float rainbow_size = random(200, 270); 
+  ellipse(pmouseX, pmouseY, rainbow_size, rainbow_size); //150, 300, rainbow_size, rainbow_size for rainbow shape
+ 
+} 
+//to keep the rainbow in a half ellipse shape: ellipse(150, 300, rainbow_size, rainbow_size)
+//is there a way I can keep the half shape without it becoming a circle and still being interactive
