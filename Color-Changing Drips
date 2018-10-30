@@ -1,0 +1,49 @@
+int numPoints = 5000;
+
+int[] x;
+int[] y;
+int[] drip; 
+int[] colors; 
+
+int index = 0;
+
+void setup() {
+  size(600,600);
+  x = new int[numPoints];
+  y = new int[numPoints];   
+  drip = new int [numPoints]; 
+  colors = new int [numPoints]; 
+  
+   background(255);
+}
+
+void draw() {
+ 
+  stroke(50,50,150);
+  
+  if ( mousePressed ) {
+    x[index] = mouseX;
+    y[index] = mouseY;
+    index = index + 1;
+    if ( index >= numPoints ) {
+      index = 0;
+    }
+  }
+  
+ // if (keyPressed) {
+ //   drip[index] = mouseY; 
+ //}
+ 
+  // use a while loop here to draw all the points in some way
+  int i = 0; 
+  while ( i < index ) {
+    fill(150,150,colors[i]);
+    ellipse( x[i], drip[i], 20 , 20);
+    i = i + 1;
+    
+    drip[index] = mouseY;
+    drip[i] = drip[i] + 1; 
+    colors[i] = colors[i] + 1; 
+    
+  }
+}
