@@ -1,0 +1,173 @@
+//My first ever Processing artwork
+
+int eyeSize = 13;
+int bubbleSize = 15; 
+int firstBubbleHeight = 50; 
+color white;
+white = color(255, 255, 255); 
+color black; 
+black = color(0, 0, 0); 
+ 
+void setup() {
+    size(470, 470);
+    ellipseMode(RADIUS);
+    PImage img;
+    img = loadImage("ocean-final.jpg");
+    background(img);
+    
+}
+void draw() {
+  //whale
+  fill(105, 105, 105);
+  strokeWeight(1);
+  beginShape(); 
+  curveVertex(137, 397); 
+  curveVertex(134, 387); 
+  curveVertex(132, 380); 
+  curveVertex(130, 370); 
+  curveVertex(125, 350);
+  curveVertex(124, 340);
+  curveVertex(125, 333);
+  curveVertex(129, 324); 
+  curveVertex(137, 313);
+  curveVertex(145, 299);
+  curveVertex(160, 284);
+  curveVertex(174, 273);
+  curveVertex(190, 262);
+  curveVertex(208, 253);
+  curveVertex(225, 245);
+  curveVertex(236, 240);
+  curveVertex(242, 230);
+  curveVertex(251, 210);
+  curveVertex(274, 194); 
+  curveVertex(292, 186);
+  curveVertex(299, 188);
+  curveVertex(298, 199);
+  curveVertex(294, 210);
+  curveVertex(291, 220);
+  curveVertex(289, 228);
+  curveVertex(289, 239);
+  curveVertex(291, 247);
+  curveVertex(304, 249);
+  curveVertex(326, 253); 
+  curveVertex(348, 264);
+  curveVertex(360, 271);
+  curveVertex(373, 285);
+  curveVertex(385, 300);
+  curveVertex(396, 317);
+  curveVertex(403, 331);
+  curveVertex(428, 411);
+  curveVertex(419, 409);
+  curveVertex(413, 404); 
+  curveVertex(410, 398); 
+  curveVertex(407, 393);
+  curveVertex(403, 386);
+  curveVertex(395, 381);
+  curveVertex(392, 384);
+  curveVertex(383, 390);
+  curveVertex(372, 400);
+  curveVertex(360, 405);
+  curveVertex(359, 390);
+  curveVertex(364, 372);
+  curveVertex(374, 364);
+  curveVertex(381, 355); 
+  curveVertex(380, 352);
+  curveVertex(371, 341);
+  curveVertex(360, 335);
+  curveVertex(345, 330);
+  curveVertex(330, 328);
+  curveVertex(317, 328);
+  curveVertex(302, 331);
+  curveVertex(310, 339); 
+  curveVertex(319, 349);
+  curveVertex(322, 362);
+  curveVertex(314, 367);
+  curveVertex(294, 365);
+  curveVertex(281, 363);
+  curveVertex(270, 357);
+  curveVertex(267, 354);
+  curveVertex(239, 373);
+  curveVertex(202, 394);
+  curveVertex(162, 401);
+  curveVertex(145, 402);
+  curveVertex(137, 397); 
+  endShape(); 
+  //whale eye
+  fill(black); 
+  ellipse(184, 359, eyeSize, 11); 
+  //whale body accents 
+  fill(192, 192, 192);
+  beginShape(); 
+  vertex(131, 364); 
+  bezierVertex(130, 329, 149, 298, 193, 266); 
+  endShape();
+  
+  fill(white); 
+  beginShape(); 
+  curveVertex(180, 343); 
+  curveVertex(185, 327);
+  curveVertex(201, 315);
+  curveVertex(219, 311);
+  curveVertex(229, 319); 
+  curveVertex(230, 329);
+  curveVertex(216, 339);
+  curveVertex(198, 346);
+  curveVertex(185, 347);
+  curveVertex(180, 343); 
+  endShape(); 
+  
+  
+  fill(white); 
+  strokeWeight(1);
+  beginShape();
+  curveVertex(166, 402); 
+  curveVertex(190, 396);
+  curveVertex(226, 382); 
+  curveVertex(247, 370); 
+  curveVertex(261, 359);
+  curveVertex(253, 317);
+  curveVertex(234, 353);
+  curveVertex(213, 363);
+  curveVertex(193, 374);
+  curveVertex(179, 385); 
+  curveVertex(162, 401);
+  curveVertex(166, 402);
+  endShape(); 
+  
+  fill(white); 
+  strokeWeight(1); 
+  beginShape(); 
+  curveVertex(298, 334); 
+  curveVertex(292, 326);
+  curveVertex(311, 317); 
+  curveVertex(331, 313); 
+  curveVertex(350, 312);
+  curveVertex(362, 318);
+  curveVertex(363, 328);
+  curveVertex(346, 334);
+  curveVertex(327, 329);
+  curveVertex(308, 329);
+  curveVertex(298, 334); 
+  endShape(); 
+
+  fill(192, 192, 192);
+  beginShape(); 
+  vertex(289, 245); 
+  bezierVertex(291, 257, 298, 265, 305, 269); //how can I make this thicker? 
+  endShape();
+  
+  fill(black);
+  strokeWeight(3);
+  line(266, 353, 256, 334);
+
+  //bubbles
+  fill(135, 206, 250);
+  strokeWeight(1); 
+  ellipse(120, 240, bubbleSize, 12); 
+  fill(135, 206, 250); 
+  ellipse(120, firstBubbleHeight + 240, bubbleSize, 12); 
+  float bubbleDirection = 1; 
+  bubbleSize = bubbleSize + bubbleDirection; 
+  if (bubbleSize >= 
+  }
+ 
