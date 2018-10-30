@@ -1,0 +1,36 @@
+//Week 5 HW Part 3- Sol Lewitt design 
+
+void setup() {
+  size(400, 400);
+  noStroke();
+}
+ 
+void draw() {
+  background(0);
+  float x = 0;
+  while (x < 10) {
+    float y = 0;
+    while (y < 10) {
+      // if column 4 AND row 4
+      if(x == 3 && y == 3) {
+        // random bright gray
+        fill(random(200, 255));
+        ellipse(20 + x * 40, 20 + y * 40, random(20,30), random(20, 30));        
+        
+        // almost transparent white
+        fill(255, 15);
+        ellipse(20 + x * 40, 20 + y * 40, 40, 40);
+        ellipse(20 + x * 40, 20 + y * 40, 50, 50);
+        ellipse(20 + x * 40, 20 + y * 40, 70, 70);
+      } else {
+        fill(128, 0, 128);
+        ellipse(20 + x * 40, 20 + y * 40, 30, 30);        
+      }
+      if(0<20){
+        fill(random(120, 140)); 
+      }
+      y = y + 1;
+    }
+    x = x + 1;
+  }
+}
