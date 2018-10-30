@@ -1,0 +1,35 @@
+void setup() {
+  size(300, 300);
+  noFill();
+  PImage img; 
+  img = loadImage("maxresdefault.jpg");
+  background(img); 
+}
+
+void draw() {
+  strokeWeight(random(3, 10)); 
+  stroke(random(255), random(255), random(255)); 
+  float rainbow_size = random(200, 270);
+  float rainbow_size_two = random(20, 40); 
+  if (mousePressed) {
+  ellipse(pmouseX, pmouseY, rainbow_size, rainbow_size); //150, 300, rainbow_size, rainbow_size for rainbow shape
+  } else {
+    ellipse(pmouseX, pmouseY, rainbow_size_two, rainbow_size_two); 
+  }
+} 
+
+void keyPressed() {
+  strokeWeight(random(5, 6)); 
+  stroke(random(255), random(255), random(255)); 
+  float rainbow_rectangle = random(100, 200);
+  float rainbow_rectangle_circle = random(25, 45); 
+  if (keyPressed) {
+    rect(pmouseX, pmouseY, rainbow_rectangle, rainbow_rectangle);  
+  }
+  else {
+    keyPressed = false; //trying to make it so when key is not pressed, a rectangle surrounds the circle?
+    rect(pmouseX, pmouseY, rainbow_rectangle_circle, rainbow_rectangle_circle); 
+  }
+}
+
+ 
